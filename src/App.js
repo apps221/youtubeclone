@@ -6,9 +6,13 @@ import VideoDetail from './components/VideoDetail'
 import ChannelDetail from './components/ChannelDetail'
 import SearchFeed from './components/SearchFeed'
 
+
+
 const App = () => {
- <BrowserRouter>
- <Box sx={{backgroundColor: "#000"}}></Box>
+   return (
+      <>
+      <BrowserRouter>
+ <Box sx={{backgroundColor: "#000"}}>
  <Navbar />
  <Routes>
     <Route path="/" exact element={<Feed />}/>
@@ -16,7 +20,12 @@ const App = () => {
     <Route path="/channel/:id" element={<ChannelDetail />}/>
     <Route path="/search/:searchTerm" element={<SearchFeed />}/>
  </Routes>
+ </Box>
  </BrowserRouter>
+      </>
+
+   )
+ 
 };
 
 export default App
